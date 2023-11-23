@@ -317,6 +317,6 @@ app.get("/teste", (req, res) => {
 //     console.error("Falha ao sincronizar tabelas com o banco de dados:", error);
 //   });
 
-app.listen(() => {
-  console.log("Servidor rodando na porta 3001.");
+app.listen(process.env.PORT, () => {
+  console.log("Servidor rodando na porta: " + process.env.PORT);
 });
